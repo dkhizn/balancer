@@ -1,0 +1,25 @@
+http:
+  host: 'localhost'
+  port: '8080'
+
+backends:
+  - host: 'localhost'
+    port: '8081'
+  - host: 'localhost'
+    port: '8082'
+  - host: 'localhost'
+    port: '8083'
+
+postgres:
+  host: 'localhost'
+  port: '5433'
+  user: 'postgres'
+  password: 'qwerty'
+  name: 'balancer'
+  pg_driver : 'pq'
+  schema : 'public'
+
+rate_limit:
+  default_capacity: 20
+  default_refill_rate: 10
+  refill_interval_seconds: 1
